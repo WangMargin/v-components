@@ -16,11 +16,13 @@ const errorHandler = error => {
 
 // 请求拦截器
 const requestHandler = config => {
+  console.log(config);
   // // 如果 token 存在
   // // 让每个请求携带自定义 token, 请根据实际情况修改
   // if (savedToken) {
   //   config.headers[REQUEST_TOKEN_KEY] = 'bearer ' + savedToken;
   // }
+  config.headers['REQUEST_TOKEN_KEY'] = 'bearer ' + 'test===wangyc';
   return config;
 };
 
